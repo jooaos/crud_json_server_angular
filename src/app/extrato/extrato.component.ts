@@ -26,7 +26,6 @@ export class ExtratoComponent implements OnInit {
   deletarTransferencia(id: string | number): void {
     this.service.deletar(id).subscribe((data) => {
       this.carregarTransferencias();
-      console.log(data);
     },
       error => console.log(error)
     );

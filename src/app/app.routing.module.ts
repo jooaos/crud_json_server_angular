@@ -1,3 +1,4 @@
+import { EditarComponent } from './editar/editar.component';
 import { NovaTransferenciaComponent } from './nova-transferencia/nova-transferencia.component';
 import { ExtratoComponent } from './extrato/extrato.component';
 import { NgModule } from '@angular/core';
@@ -18,6 +19,10 @@ export const routes: Routes = [
   {
     path: 'nova-transferencia',
     component: NovaTransferenciaComponent
+  },
+  {
+    path: 'editar-transferencia/:id',
+    component: EditarComponent
   },
 ];
 

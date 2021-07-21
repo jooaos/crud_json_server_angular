@@ -14,7 +14,7 @@
         <td class="tabela__conteudo">{{transferencia?.destino}}</td>
         <td class="tabela__conteudo tabela__botao">
           <button class="botao deletar" (click)="deletarTransferencia(transferencia?.id)" type="button">deletar</button>
-          <button class="botao editar">editar</button>
+          <button class="botao editar" [routerLink]="['/editar-transferencia', transferencia?.id]">editar</button>
         </td>
       </tr>
     </tbody>

@@ -1,3 +1,4 @@
+import { EditarComponent } from './editar/editar.component';
 import { AppRoutingModule } from './app.routing.module';
 import { NovaTransferenciaComponent } from './nova-transferencia/nova-transferencia.component';
 import { DEFAULT_CURRENCY_CODE, LOCALE_ID, NgModule } from '@angular/core';
@@ -15,7 +16,8 @@ registerLocaleData(localePt, 'pt');
   declarations: [
     AppComponent,
     NovaTransferenciaComponent,
-    ExtratoComponent
+    ExtratoComponent,
+    EditarComponent
   ],
   imports: [
     BrowserModule,

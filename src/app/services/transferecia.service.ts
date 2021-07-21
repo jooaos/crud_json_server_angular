@@ -33,6 +33,10 @@ export class TransfereciaService {
     return this.httpCliente.delete<Transferencia>(`${this.url}/${id}`);
   }
 
+  update(transferencia: Transferencia): Observable<Transferencia> {
+    return this.httpCliente.put<Transferencia>(`${this.url}/${transferencia.id}`, transferencia);
+  }
+
   private hidratar(transferencia: Transferencia): void {
     transferencia.data = new Date();
   }

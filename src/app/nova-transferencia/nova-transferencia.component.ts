@@ -19,10 +19,8 @@ export class NovaTransferenciaComponent {
   constructor(private service: TransfereciaService, private router: Router) { }
 
   transferir(): void {
-    console.log('Solicitada nova transferência');
     const valorEmitir: Transferencia = { valor: this.valor, destino: this.destino };
     this.service.adicionar(valorEmitir).subscribe((resultado) => {
-      console.log(resultado);
       this.limparCampos();
       this.router.navigateByUrl('extrato');
     },
