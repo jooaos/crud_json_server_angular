@@ -1,27 +1,36 @@
-# Bytebank
+### Sobre esse repositório
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 11.2.5.
+Olá! Tudo bem? Bom esse repositório tem o intuito de apresentar um CRUD simples utilizando Angular e uma API Rest construida com ajuda do JSON Server
 
-## Development server
+### Dependências
+Para fazer os testes, você precisa ter instalado em sua máquina:
+ - [Angular] (>= 11)
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
 
-## Code scaffolding
+### Debugando a aplicação
+> Observação: Nessa aplicação é preciso contar com dois terminais, para que em um você consiga deixar a API ativa
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
 
-## Build
+```sh
+https://github.com/jooaos/crud_json_server_angular.git
+cd crud_json_server_angular
+```
+> Para a API ( a partir do arquivo fonte)
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
+```sh
+cd dados
+json-server --watch db.json
+```
+> Para o front-end (outro terminal e a partir do arquivo fonte)
 
-## Running unit tests
+```sh
+npm install
+ng serve
+```
+Ao final do **ng serve** será gerado um link para uma porta em localhost, é só você acessar que verá a aplicação rodando.
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+##### The end
 
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+[//]: #
+   [JSON Server]: <https://www.npmjs.com/package/json-server>
+   [Angular]: <https://angular.io/>
