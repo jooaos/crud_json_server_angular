@@ -5,12 +5,17 @@
       <th class="tabela__cabecalho__conteudo">Data</th>
       <th class="tabela__cabecalho__conteudo">Valor</th>
       <th class="tabela__cabecalho__conteudo">Destino</th>
+      <th class="tabela__cabecalho__conteudo">Ações</th>
     </thead>
     <tbody *ngIf="transferencias?.length; else listaVazia">
       <tr class="tabela__linha" *ngFor="let transferencia of transferencias">
         <td class="tabela__conteudo">{{transferencia?.data | date:'short'}}</td>
         <td class="tabela__conteudo">{{transferencia?.valor | currency}}</td>
         <td class="tabela__conteudo">{{transferencia?.destino}}</td>
+        <td class="tabela__conteudo tabela__botao">
+          <button class="botao deletar" (click)="deletarTransferencia(transferencia?.id)" type="button">deletar</button>
+          <button class="botao editar">editar</button>
+        </td>
       </tr>
     </tbody>
   </table>

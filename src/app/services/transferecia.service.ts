@@ -29,6 +29,10 @@ export class TransfereciaService {
     return this.httpCliente.post<Transferencia>(this.url, transferencia);
   }
 
+  deletar(id: string | number): Observable<Transferencia> {
+    return this.httpCliente.delete<Transferencia>(`${this.url}/${id}`);
+  }
+
   private hidratar(transferencia: Transferencia): void {
     transferencia.data = new Date();
   }
