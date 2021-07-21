@@ -1,12 +1,6 @@
 {
   "transferencias": [
     {
-      "id": "1",
-      "destino": "1212-1",
-      "valor": 34,
-      "data": "2020-11-04T16:30:10.710Z"
-    },
-    {
       "id": "2",
       "destino": "12122",
       "valor": 45,

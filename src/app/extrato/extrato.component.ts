@@ -24,11 +24,12 @@ export class ExtratoComponent implements OnInit {
   }
 
   deletarTransferencia(id: string | number): void {
-    this.service.deletar(id).subscribe((data) => {
-      this.carregarTransferencias();
-    },
-      error => console.log(error)
-    );
+    if (confirm('Você realmente deseja excluir essa transferência?')) {
+      this.service.deletar(id).subscribe(() => {
+        this.carregarTransferencias();
+      },
+        error => console.log(error)
+      );
+    }
   }
-
 }
